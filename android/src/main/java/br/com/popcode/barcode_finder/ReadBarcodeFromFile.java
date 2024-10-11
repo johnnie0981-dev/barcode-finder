@@ -132,7 +132,7 @@ public class ReadBarcodeFromFile extends AsyncTask<Void, Void, String> {
                         .addOnSuccessListener(barcodes -> {
                             if (!barcodes.isEmpty()) {
                                 for (Barcode b : barcodes) {
-                                    Log.d("BarcodeTest", "Barcode: " + b.getRawValue());
+                                    Log.d("BarcodeTest2", "Barcode: " + b.getRawValue());
                                 }
                             } else {
                                 Log.d("BarcodeTest", "Barcode not found");
