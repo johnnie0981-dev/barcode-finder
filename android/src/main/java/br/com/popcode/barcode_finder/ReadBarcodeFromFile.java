@@ -144,7 +144,7 @@ public class ReadBarcodeFromFile extends AsyncTask<Void, Void, String> {
                     Log.d("BarcodeTest", "Processing image...");
                 }
                 List<Barcode> barcodes = result.getResult();
-                if (!barcodes.isEmpty() && (existBarcodeType(barcodes.get(0).getFormat()))){
+                if (!barcodes.isEmpty()){
                     return barcodes.get(0).getRawValue();
                 }
             }
@@ -165,7 +165,7 @@ public class ReadBarcodeFromFile extends AsyncTask<Void, Void, String> {
                 return true;
             }
         Log.d("BarcodeTest", "Barcode type not found on list");
-        return true;
+        return false;
     }
 
     private Bitmap toGrayscale(Bitmap bmpOriginal)
