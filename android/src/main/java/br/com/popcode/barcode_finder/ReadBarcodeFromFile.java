@@ -165,7 +165,7 @@ public class ReadBarcodeFromFile extends AsyncTask<Void, Void, String> {
                 return true;
             }
         Log.d("BarcodeTest", "Barcode type not found on list");
-        return false;
+        return true;
     }
 
     private Bitmap toGrayscale(Bitmap bmpOriginal)
